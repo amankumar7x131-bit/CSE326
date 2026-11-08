@@ -1,0 +1,635 @@
+    * { box-sizing: border-box; }
+
+    html {
+       scroll-behavior: smooth;
+      }
+
+
+    body {
+        margin: 0;
+        font-family: Arial,sans-serif;
+        color: #203544; 
+        background: #f5f9fa; 
+        line-height: 1.6;
+      }
+
+    a {
+       color: inherit;
+       text-decoration: none; 
+      }
+
+
+    .topbar {
+       padding: 9px 6%; 
+       background: #087f79;
+        color: white; 
+        font-size: 13px; 
+        display: flex; 
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap; 
+        }
+
+
+    header {
+       position: sticky;
+       top: 0;
+        z-index: 5;
+        background: white;
+        box-shadow: 0 3px 14px #17394a15;
+      }
+
+
+    nav {
+        min-height: 68px;
+        padding: 10px 5%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between;
+        gap: 20px; 
+        flex-wrap: wrap; 
+      }
+
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #087f79;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+
+    .brand-mark { 
+      width: 38px; 
+      height: 38px; 
+      display: grid;
+      place-items: center; 
+      border-radius: 11px; 
+      color: white;
+      background: #12a89d;
+      font-size: 27px;
+     }
+
+
+    .links {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 6px 15px;
+        font-size: 13px;
+      }
+
+
+    .links a:hover {
+       color: #07877f;
+      }
+
+
+    .hero {
+       min-height: 390px; 
+       padding: 70px 8%;
+       display: flex; 
+       align-items: center; 
+       background: linear-gradient(110deg,#e1f6f3 0%,#eaf4fb 65%,#d2eee9 100%);
+      }
+
+
+    .hero-content { 
+      max-width: 700px; 
+    }
+
+
+    .eyebrow {
+       color: #07877f; 
+       font-weight: bold;
+       text-transform: uppercase;
+       letter-spacing: 1.4px; 
+       font-size: 13px;
+      }
+
+    h1 {
+        max-width: 650px;
+        margin: 10px 0;
+        font-size: clamp(34px,5vw,55px);
+        line-height: 1.1; color: #173b4c;
+      }
+
+    h2 {
+       margin: 0 0 8px;
+        color: #173b4c;
+        font-size: 29px;       
+      }
+
+
+    h3 {
+      margin: 0 0 6px;
+      color: #173b4c;
+    }
+
+
+    .hero p { 
+      max-width: 610px; color: #526b77;   
+    }
+
+
+    .button { 
+      display: inline-block;
+       margin: 9px 8px 0 0; 
+       padding: 11px 17px;
+        border: 0; 
+        border-radius: 7px; 
+        background: #0b948b; 
+        color: white;
+         font-weight: bold ;
+          cursor: pointer; 
+    }
+
+    .button:hover { 
+      background: #08756f; 
+    }
+
+    .button.light { 
+      color: #087f79;
+      background: white; 
+      border: 1px solid #b7dcd8;
+    }
+
+    .button.pharmacy  {
+       color: #087f79; 
+       background: white;
+        border: 1px solid #b7dcd8;
+       }
+
+
+    .quick {
+       position: relative;
+        width: min(850px,90%);
+        margin: -28px auto 0;
+        padding: 20px;
+        border-radius: 13px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr); 
+        gap: 12px; 
+        background: white; 
+        box-shadow: 0 8px 28px #193b4b12;
+        text-align: center;
+      }
+
+
+    .quick strong { display: block; color: #087f79; font-size: 17px; }
+    section { padding: 62px 8%; scroll-margin-top: 90px; }
+    .section-intro { margin: 0 0 24px; color: #647985; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 17px; }
+    .card { padding: 21px; border: 1px solid #e0eaed; border-radius: 12px; background: white; box-shadow: 0 4px 15px #1d46520a; }
+    .icon { margin-bottom: 8px; font-size: 29px; }
+    .muted { color: #687d87; font-size: 14px; }
+    .tint { background: #eaf5f4; }
+    .appointment-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: start; }
+    form { display: grid; gap: 12px; }
+    label { display: block; margin-bottom: 4px; font-size: 13px; font-weight: bold; }
+    input, select, textarea { width: 100%; padding: 11px; border: 1px solid #d4e0e4; border-radius: 7px; background: white; color: #203544; font: inherit; }
+    textarea { min-height: 85px; resize: vertical; }
+    .portal-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 18px; }
+    .portal-card { padding: 24px; border-top: 4px solid #12a89d; }
+    .notice { padding: 11px 13px; border-radius: 7px; background: #fff7df; color: #725915; font-size: 13px; }
+    .dash-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap: 14px; margin: 18px 0; }
+    .stat { padding: 17px; border-radius: 10px; background: #e8f6f4; }
+    .stat strong { display: block; color: #087f79; font-size: 24px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; background: white; font-size: 14px; }
+    th, td { padding: 11px; border: 1px solid #dce7e9; text-align: left; }
+    th { background: #e8f6f4; }
+    .contact-box { padding: 22px; border-radius: 12px; background: #e8f6f4; }
+    footer { padding: 38px 8% 18px; color: #e9f6f5; background: #173b4c; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 25px; }
+    footer h3 { color: white; }
+    footer a { display: block; margin: 4px 0; color: #d0e3e3; font-size: 14px; }
+    .copyright { margin-top: 25px; padding-top: 13px; border-top: 1px solid #ffffff30; color: #c4d9dc; font-size: 12px; }
+    @media (max-width:700px) { .appointment-layout,.footer-grid { grid-template-columns: 1fr; } .quick { grid-template-columns: 1fr; } nav { justify-content: center; } .links { justify-content: center; } }
+  
+
+    .records-toggle-btn {
+    
+    background: #087f6e;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: 0.3s;
+}
+
+.records-toggle-btn:hover {
+    background: #056457;
+    transform: translateY(-2px);
+}
+
+#adminAppointmentsContainer {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+#adminAppointmentsContainer table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    /* ===== AI CARE CHATBOT ===== */
+    .ai-care-toggle {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 1000;
+      border: 0;
+      border-radius: 50%;
+      width: 62px;
+      height: 62px;
+      background: #0b948b;
+      color: white;
+      font-size: 27px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px #173b4c35;
+    }
+    .ai-care-toggle:hover { background: #08756f; }
+
+    .ai-care-window {
+      position: fixed;
+      right: 24px;
+      bottom: 98px;
+      z-index: 1000;
+      width: min(390px, calc(100vw - 32px));
+      height: min(560px, calc(100vh - 125px));
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid #dce7e9;
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 18px 50px #173b4c30;
+    }
+    .ai-care-window.open { display: flex; }
+    .ai-care-header {
+      padding: 15px 17px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #087f79;
+      color: white;
+    }
+    .ai-care-title { display: flex; align-items: center; gap: 10px; }
+    .ai-care-avatar {
+      width: 38px; height: 38px; display: grid; place-items: center;
+      border-radius: 50%; background: white; color: #087f79; font-size: 20px;
+    }
+    .ai-care-title strong { display: block; }
+    .ai-care-title small { opacity: .85; }
+    .ai-care-close {
+      border: 0; background: transparent; color: white; font-size: 24px; cursor: pointer;
+    }
+    .ai-care-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 15px;
+      background: #f5f9fa;
+    }
+    .ai-care-message {
+      max-width: 84%;
+      margin: 0 0 11px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      white-space: pre-wrap;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    .ai-care-message.bot {
+      margin-right: auto;
+      background: white;
+      border: 1px solid #e0eaed;
+      color: #203544;
+    }
+    .ai-care-message.user {
+      margin-left: auto;
+      background: #0b948b;
+      color: white;
+    }
+    .ai-care-quick {
+      display: flex;
+      gap: 7px;
+      overflow-x: auto;
+      padding: 9px 12px;
+      border-top: 1px solid #e0eaed;
+      background: white;
+    }
+    .ai-care-quick button {
+      flex: 0 0 auto;
+      padding: 7px 10px;
+      border: 1px solid #b7dcd8;
+      border-radius: 16px;
+      background: #f5fffd;
+      color: #087f79;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .ai-care-form {
+      display: flex;
+      gap: 8px;
+      padding: 10px;
+      border-top: 1px solid #e0eaed;
+      background: white;
+    }
+    .ai-care-form input {
+      flex: 1;
+      margin: 0;
+      min-width: 0;
+    }
+    .ai-care-form button {
+      width: 46px;
+      border: 0;
+      border-radius: 8px;
+      background: #0b948b;
+      color: white;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .ai-care-form button:disabled { opacity: .55; cursor: not-allowed; }
+    .ai-care-disclaimer {
+      padding: 7px 12px;
+      font-size: 10px;
+      color: #687d87;
+      background: white;
+      text-align: center;
+    }
+    @media (max-width:700px) {
+      .ai-care-toggle { right: 16px; bottom: 16px; }
+      .ai-care-window { right: 16px; bottom: 88px; }
+    }
+
+
+    /* ===== AI CARE CHATBOT ===== */
+    .ai-care-toggle {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 1000;
+      border: 0;
+      border-radius: 50%;
+      width: 62px;
+      height: 62px;
+      background: #0b948b;
+      color: white;
+      font-size: 27px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px #173b4c35;
+    }
+    .ai-care-toggle:hover { background: #08756f; }
+
+    .ai-care-window {
+      position: fixed;
+      right: 24px;
+      bottom: 98px;
+      z-index: 1000;
+      width: min(390px, calc(100vw - 32px));
+      height: min(560px, calc(100vh - 125px));
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid #dce7e9;
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 18px 50px #173b4c30;
+    }
+    .ai-care-window.open { display: flex; }
+    .ai-care-header {
+      padding: 15px 17px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #087f79;
+      color: white;
+    }
+    .ai-care-title { display: flex; align-items: center; gap: 10px; }
+    .ai-care-avatar {
+      width: 38px; height: 38px; display: grid; place-items: center;
+      border-radius: 50%; background: white; color: #087f79; font-size: 20px;
+    }
+    .ai-care-title strong { display: block; }
+    .ai-care-title small { opacity: .85; }
+    .ai-care-close {
+      border: 0; background: transparent; color: white; font-size: 24px; cursor: pointer;
+    }
+    .ai-care-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 15px;
+      background: #f5f9fa;
+    }
+    .ai-care-message {
+      max-width: 84%;
+      margin: 0 0 11px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      white-space: pre-wrap;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    .ai-care-message.bot {
+      margin-right: auto;
+      background: white;
+      border: 1px solid #e0eaed;
+      color: #203544;
+    }
+    .ai-care-message.user {
+      margin-left: auto;
+      background: #0b948b;
+      color: white;
+    }
+    .ai-care-quick {
+      display: flex;
+      gap: 7px;
+      overflow-x: auto;
+      padding: 9px 12px;
+      border-top: 1px solid #e0eaed;
+      background: white;
+    }
+    .ai-care-quick button {
+      flex: 0 0 auto;
+      padding: 7px 10px;
+      border: 1px solid #b7dcd8;
+      border-radius: 16px;
+      background: #f5fffd;
+      color: #087f79;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .ai-care-form {
+      display: flex;
+      gap: 8px;
+      padding: 10px;
+      border-top: 1px solid #e0eaed;
+      background: white;
+    }
+    .ai-care-form input {
+      flex: 1;
+      margin: 0;
+      min-width: 0;
+    }
+    .ai-care-form button {
+      width: 46px;
+      border: 0;
+      border-radius: 8px;
+      background: #0b948b;
+      color: white;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .ai-care-form button:disabled { opacity: .55; cursor: not-allowed; }
+    .ai-care-disclaimer {
+      padding: 7px 12px;
+      font-size: 10px;
+      color: #687d87;
+      background: white;
+      text-align: center;
+    }
+    @media (max-width:700px) {
+      .ai-care-toggle { right: 16px; bottom: 16px; }
+      .ai-care-window { right: 16px; bottom: 88px; }
+    }
+
+/* Appointment Form Improvements */
+
+#appointmentForm {
+    display: grid;
+    gap: 18px;
+}
+
+#appointmentForm input,
+#appointmentForm select,
+#appointmentForm textarea {
+
+    width: 100%;
+    padding: 13px;
+
+    border: 1px solid #d5e0e8;
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    background: white;
+
+    transition: 0.3s;
+
+}
+
+#appointmentForm input:focus,
+#appointmentForm select:focus,
+#appointmentForm textarea:focus {
+
+    border-color: #087f8c;
+
+    box-shadow: 0 0 5px rgba(8,127,140,0.2);
+
+}
+
+#appointmentForm label {
+
+    display: block;
+    margin-bottom: 8px;
+
+    font-weight: 600;
+
+    color: #26364a;
+
+}
+
+#appointmentRecords td {
+
+    padding: 15px;
+
+    border-bottom: 1px solid #e5edf2;
+
+    font-size: 13px;
+
+}
+
+#appointmentRecords tr:hover {
+
+    background: #f0f8fa;
+
+}
+
+/* FAQ SECTION */
+
+.faq-section {
+    padding: 80px 8%;
+    background: #f7fbfa;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #123c35;
+}
+
+.faq-intro {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.faq-container {
+    max-width: 850px;
+    margin: auto;
+    text-align: left;
+}
+
+.faq-item {
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #e0e8e5;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border: none;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 600;
+    color: #123c35;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question span {
+    font-size: 24px;
+    color: #087f6e;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 20px 18px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question span {
+    transform: rotate(45deg);
+}

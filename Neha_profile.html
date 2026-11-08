@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dr. Neha Iyer | City Care Hospital</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #f4f8fc;
+    color: #26364a;
+}
+
+/* Navbar */
+
+header {
+    background: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #087f8c;
+}
+
+.logo span {
+    color: #26364a;
+}
+
+nav a {
+    text-decoration: none;
+    color: #46566a;
+    margin-left: 25px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #087f8c;
+}
+
+/* Hero Section */
+
+.hero {
+    background: linear-gradient(120deg, #e4f5f7, #edf4ff);
+    padding: 65px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.doctor-info {
+    max-width: 600px;
+}
+
+.badge {
+    display: inline-block;
+    background: #d2f1ed;
+    color: #087f8c;
+    padding: 9px 16px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.doctor-info h1 {
+    font-size: 43px;
+    color: #18334e;
+    margin-bottom: 12px;
+}
+
+.doctor-info h3 {
+    color: #07818c;
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+.doctor-info p {
+    color: #65768a;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 23px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #087f8c;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #05636d;
+}
+
+.secondary-btn {
+    border: 1px solid #087f8c;
+    color: #087f8c;
+}
+
+.secondary-btn:hover {
+    background: #087f8c;
+    color: white;
+}
+
+.doctor-image {
+    width: 310px;
+    height: 370px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.doctor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Statistics */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: white;
+    margin: -1px 8% 40px;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.stat h2 {
+    color: #087f8c;
+    font-size: 28px;
+    margin-bottom: 7px;
+}
+
+.stat p {
+    font-size: 13px;
+    color: #718096;
+}
+
+/* Common Sections */
+
+.container {
+    padding: 35px 8%;
+}
+
+.section-title {
+    font-size: 27px;
+    color: #18334e;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    color: #78899b;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+/* About */
+
+.about-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    line-height: 1.9;
+    color: #64758a;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    font-size: 14px;
+}
+
+/* Qualifications */
+
+.qualification-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.qualification-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid #087f8c;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.qualification-card h3 {
+    font-size: 17px;
+    color: #18334e;
+    margin-bottom: 12px;
+}
+
+.qualification-card p {
+    color: #718096;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Specializations */
+
+.specialization-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.specialization-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
+
+.specialization-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.specialization-card h3 {
+    color: #18334e;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.specialization-card p {
+    color: #718096;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Treatment */
+
+.treatment-box {
+    background: #e6f4f5;
+    padding: 35px;
+    border-radius: 12px;
+}
+
+.treatment-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.treatment-list div {
+    background: white;
+    padding: 17px;
+    border-radius: 8px;
+    color: #46566a;
+    font-size: 14px;
+}
+
+.check {
+    color: #087f8c;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Timings */
+
+.timing-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.timing-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 0;
+    border-bottom: 1px solid #edf0f3;
+    font-size: 14px;
+}
+
+.timing-row:last-child {
+    border: none;
+}
+
+.timing-row span:first-child {
+    font-weight: 600;
+    color: #34475c;
+}
+
+.timing-row span:last-child {
+    color: #087f8c;
+    font-weight: 600;
+}
+
+/* Reviews */
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.review-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.stars {
+    color: #f4ad28;
+    margin-bottom: 15px;
+}
+
+.review-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #718096;
+    margin-bottom: 15px;
+}
+
+.review-card h4 {
+    color: #18334e;
+}
+
+/* Appointment */
+
+.appointment {
+    margin: 50px 8%;
+    padding: 45px;
+    border-radius: 15px;
+    background: linear-gradient(120deg, #087f8c, #075a83);
+    color: white;
+    text-align: center;
+}
+
+.appointment h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.appointment p {
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: #d9f2f4;
+}
+
+.appointment a {
+    display: inline-block;
+    background: white;
+    color: #087f8c;
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Footer */
+
+footer {
+    background: #18334e;
+    color: white;
+    text-align: center;
+    padding: 28px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Responsive Design */
+
+@media(max-width: 900px) {
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .qualification-grid,
+    .specialization-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 12px;
+    }
+
+    .doctor-info h1 {
+        font-size: 32px;
+    }
+
+    .doctor-image {
+        width: 250px;
+        height: 300px;
+    }
+
+    .qualification-grid,
+    .specialization-grid,
+    .review-grid,
+    .treatment-list {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        margin: 0 5% 30px;
+        padding: 20px 10px;
+    }
+
+    .stat h2 {
+        font-size: 23px;
+    }
+
+    .container {
+        padding: 25px 5%;
+    }
+
+    .appointment {
+        margin: 30px 5%;
+        padding: 30px 18px;
+    }
+
+    .timing-row {
+        font-size: 12px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+    <div class="logo">City Care <span>Hospital</span></div>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#qualification">Education</a>
+        <a href="#specialization">Specialization</a>
+        <a href="#timing">Timings</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <div class="doctor-info">
+
+        <span class="badge">PAEDIATRICS · CHILD HEALTHCARE</span>
+
+        <h1>Dr. Neha Iyer</h1>
+
+        <h3>Senior Paediatrician</h3>
+
+        <p>
+            Dedicated to providing compassionate and comprehensive
+            healthcare for infants, children and adolescents.
+            Specializing in child development, newborn care,
+            preventive healthcare and childhood illness management.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#appointment" class="btn primary-btn">
+                Book Appointment
+            </a>
+
+            <a href="#about" class="btn secondary-btn">
+                View Profile
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="doctor-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=700"
+        alt="Dr. Neha Iyer profile">
+
+    </div>
+
+</section>
+
+
+<!-- STATISTICS -->
+
+<section class="stats">
+
+    <div class="stat">
+        <h2>9+</h2>
+        <p>Years of Experience*</p>
+    </div>
+
+    <div class="stat">
+        <h2>3500+</h2>
+        <p>Children Consulted*</p>
+    </div>
+
+    <div class="stat">
+        <h2>98%</h2>
+        <p>Patient Satisfaction*</p>
+    </div>
+
+    <div class="stat">
+        <h2>24/7</h2>
+        <p>Hospital Emergency Support</p>
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="container" id="about">
+
+    <h2 class="section-title">About the Doctor</h2>
+
+    <p class="section-subtitle">
+        Professional background and paediatric expertise
+    </p>
+
+    <div class="about-box">
+
+        Dr. Neha Iyer is presented as an experienced Paediatrician
+        at City Care Hospital, focusing on the medical care and
+        healthy development of infants, children and adolescents.
+
+        <br><br>
+
+        Her clinical approach emphasizes early diagnosis,
+        preventive healthcare, regular growth monitoring
+        and age-appropriate medical treatment.
+
+        <br><br>
+
+        She believes that every child deserves individual attention
+        and a comfortable healthcare experience. She also values
+        communication with parents and caregivers to help them
+        understand their child's health and development.
+
+    </div>
+
+</section>
+
+
+<!-- QUALIFICATIONS -->
+
+<section class="container" id="qualification">
+
+    <h2 class="section-title">Education & Qualifications</h2>
+
+    <p class="section-subtitle">
+        Academic background and professional medical training
+    </p>
+
+    <div class="qualification-grid">
+
+        <div class="qualification-card">
+
+            <h3>MBBS</h3>
+
+            <p>
+                Bachelor of Medicine and Bachelor of Surgery.
+                Foundational medical education covering human
+                anatomy, physiology and clinical medicine.
+            </p>
+
+        </div>
+
+        <div class="qualification-card">
+
+            <h3>MD – Paediatrics</h3>
+
+            <p>
+                Postgraduate specialization in child healthcare,
+                childhood diseases, newborn health and
+                paediatric clinical management.
+            </p>
+
+        </div>
+
+        <div class="qualification-card">
+
+            <h3>Advanced Neonatal Training</h3>
+
+            <p>
+                Additional clinical training in newborn assessment,
+                neonatal care, infant monitoring and early
+                childhood healthcare.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SPECIALIZATIONS -->
+
+<section class="container" id="specialization">
+
+    <h2 class="section-title">Medical Specializations</h2>
+
+    <p class="section-subtitle">
+        Comprehensive healthcare services for children
+    </p>
+
+    <div class="specialization-grid">
+
+        <div class="specialization-card">
+            <div class="icon">👶</div>
+            <h3>Newborn Care</h3>
+            <p>
+                Health assessment, feeding guidance and
+                monitoring of newborn babies.
+            </p>
+        </div>
+
+        <div class="specialization-card">
+            <div class="icon">💉</div>
+            <h3>Child Vaccination</h3>
+            <p>
+                Age-appropriate immunization guidance
+                and vaccination schedule management.
+            </p>
+        </div>
+
+        <div class="specialization-card">
+            <div class="icon">📏</div>
+            <h3>Growth & Development</h3>
+            <p>
+                Monitoring children's physical growth,
+                developmental milestones and general health.
+            </p>
+        </div>
+
+        <div class="specialization-card">
+            <div class="icon">🌡️</div>
+            <h3>Childhood Infections</h3>
+            <p>
+                Evaluation and management of common childhood
+                illnesses, infections and fever.
+            </p>
+        </div>
+
+        <div class="specialization-card">
+            <div class="icon">🥗</div>
+            <h3>Child Nutrition</h3>
+            <p>
+                Nutritional assessment, healthy eating guidance
+                and age-appropriate feeding advice.
+            </p>
+        </div>
+
+        <div class="specialization-card">
+            <div class="icon">🧸</div>
+            <h3>Adolescent Healthcare</h3>
+            <p>
+                General health assessments and guidance
+                for children transitioning into adolescence.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TREATMENT APPROACH -->
+
+<section class="container">
+
+    <div class="treatment-box">
+
+        <h2 class="section-title">Child Treatment Approach</h2>
+
+        <p class="section-subtitle">
+            A caring and structured approach to paediatric healthcare
+        </p>
+
+        <div class="treatment-list">
+
+            <div><span class="check">✓</span> Child Health Consultation</div>
+
+            <div><span class="check">✓</span> Newborn Health Assessment</div>
+
+            <div><span class="check">✓</span> Growth & Development Monitoring</div>
+
+            <div><span class="check">✓</span> Vaccination Planning</div>
+
+            <div><span class="check">✓</span> Childhood Illness Evaluation</div>
+
+            <div><span class="check">✓</span> Nutrition & Feeding Guidance</div>
+
+            <div><span class="check">✓</span> Parent & Caregiver Counselling</div>
+
+            <div><span class="check">✓</span> Regular Follow-up & Monitoring</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONSULTATION TIMINGS -->
+
+<section class="container" id="timing">
+
+    <h2 class="section-title">Consultation Schedule</h2>
+
+    <p class="section-subtitle">
+        Paediatrics department consultation hours
+    </p>
+
+    <div class="timing-box">
+
+        <div class="timing-row">
+            <span>Monday – Friday</span>
+            <span>9:00 AM – 1:00 PM</span>
+        </div>
+
+        <div class="timing-row">
+            <span>Saturday</span>
+            <span>10:00 AM – 2:00 PM</span>
+        </div>
+
+        <div class="timing-row">
+            <span>Sunday</span>
+            <span>Closed</span>
+        </div>
+
+        <div class="timing-row">
+            <span>Department</span>
+            <span>Paediatrics</span>
+        </div>
+
+        <div class="timing-row">
+            <span>Location</span>
+            <span>City Care Hospital</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PATIENT REVIEWS -->
+
+<section class="container">
+
+    <h2 class="section-title">Parent Experiences</h2>
+
+    <p class="section-subtitle">
+        Sample testimonials for the hospital website prototype
+    </p>
+
+    <div class="review-grid">
+
+        <div class="review-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "The doctor was very patient and explained
+                my child's health condition and treatment
+                clearly. The consultation experience was reassuring."
+            </p>
+
+            <h4>— Sample Parent 01</h4>
+
+        </div>
+
+        <div class="review-card">
+
+            <div class="stars">★★★★★</div>
+
+            <p>
+                "We appreciated the detailed guidance about
+                vaccination, nutrition and our child's growth.
+                A very organized consultation experience."
+            </p>
+
+            <h4>— Sample Parent 02</h4>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- APPOINTMENT -->
+
+<section class="appointment" id="appointment">
+
+    <h2>Give Your Child the Care They Deserve</h2>
+
+    <p>
+        Schedule a consultation with Dr. Neha Iyer
+        at City Care Hospital.
+    </p>
+
+    <a href="index.html#appointment">
+        Book Appointment →
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>City Care Hospital</h3>
+
+    <p>
+        Dedicated to Better Healthcare & Patient Well-being
+    </p>
+
+    <p>
+        © 2026 City Care Hospital. All Rights Reserved.
+    </p>
+
+    <p>
+        Demonstration profile: Qualifications, experience,
+        statistics, timings and testimonials are illustrative
+        and must be verified before publication.
+    </p>
+
+</footer>
+
+</body>
+</html>

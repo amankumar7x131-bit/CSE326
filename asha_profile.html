@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Asha Sharma | City Care Hospital</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #f4f8fc;
+            color: #26364a;
+        }
+
+        /* Navbar */
+
+        header {
+            background: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #087f8c;
+        }
+
+        .logo span {
+            color: #26364a;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #46566a;
+            margin-left: 25px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #087f8c;
+        }
+
+        /* Hero Section */
+
+        .hero {
+            background: linear-gradient(120deg, #e4f5f7, #edf4ff);
+            padding: 65px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .doctor-info {
+            max-width: 600px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #d2f1ed;
+            color: #087f8c;
+            padding: 9px 16px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .doctor-info h1 {
+            font-size: 43px;
+            color: #18334e;
+            margin-bottom: 12px;
+        }
+
+        .doctor-info h3 {
+            color: #07818c;
+            font-size: 21px;
+            margin-bottom: 18px;
+        }
+
+        .doctor-info p {
+            color: #65768a;
+            line-height: 1.8;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 14px 23px;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .primary-btn {
+            background: #087f8c;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: #05636d;
+        }
+
+        .secondary-btn {
+            border: 1px solid #087f8c;
+            color: #087f8c;
+        }
+
+        .secondary-btn:hover {
+            background: #087f8c;
+            color: white;
+        }
+
+        .doctor-image {
+            width: 310px;
+            height: 370px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .doctor-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Statistics */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: white;
+            margin: -1px 8% 40px;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .stat h2 {
+            color: #087f8c;
+            font-size: 28px;
+            margin-bottom: 7px;
+        }
+
+        .stat p {
+            font-size: 13px;
+            color: #718096;
+        }
+
+        /* General Sections */
+
+        .container {
+            padding: 35px 8%;
+        }
+
+        .section-title {
+            font-size: 27px;
+            color: #18334e;
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            color: #78899b;
+            font-size: 14px;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        /* About */
+
+        .about-box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            line-height: 1.9;
+            color: #64758a;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            font-size: 14px;
+        }
+
+        /* Qualifications */
+
+        .qualification-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .qualification-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #087f8c;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+
+        .qualification-card h3 {
+            font-size: 17px;
+            color: #18334e;
+            margin-bottom: 12px;
+        }
+
+        .qualification-card p {
+            color: #718096;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        /* Specialization */
+
+        .specialization-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .specialization-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            transition: 0.3s;
+        }
+
+        .specialization-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .specialization-card .icon {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .specialization-card h3 {
+            color: #18334e;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .specialization-card p {
+            color: #718096;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* Treatment */
+
+        .treatment-box {
+            background: #e6f4f5;
+            padding: 35px;
+            border-radius: 12px;
+        }
+
+        .treatment-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .treatment-list div {
+            background: white;
+            padding: 17px;
+            border-radius: 8px;
+            color: #46566a;
+            font-size: 14px;
+        }
+
+        .check {
+            color: #087f8c;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Timings */
+
+        .timing-box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+
+        .timing-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 17px 0;
+            border-bottom: 1px solid #edf0f3;
+            font-size: 14px;
+        }
+
+        .timing-row:last-child {
+            border: none;
+        }
+
+        .timing-row span:first-child {
+            font-weight: 600;
+            color: #34475c;
+        }
+
+        .timing-row span:last-child {
+            color: #087f8c;
+            font-weight: 600;
+        }
+
+        /* Reviews */
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+
+        .stars {
+            color: #f4ad28;
+            margin-bottom: 15px;
+        }
+
+        .review-card p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #718096;
+            margin-bottom: 15px;
+        }
+
+        .review-card h4 {
+            color: #18334e;
+        }
+
+        /* Appointment CTA */
+
+        .appointment {
+            margin: 50px 8%;
+            padding: 45px;
+            border-radius: 15px;
+            background: linear-gradient(120deg, #087f8c, #075a83);
+            color: white;
+            text-align: center;
+        }
+
+        .appointment h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .appointment p {
+            font-size: 14px;
+            margin-bottom: 25px;
+            color: #d9f2f4;
+        }
+
+        .appointment a {
+            display: inline-block;
+            background: white;
+            color: #087f8c;
+            padding: 14px 25px;
+            text-decoration: none;
+            border-radius: 7px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #18334e;
+            color: white;
+            text-align: center;
+            padding: 28px;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        /* Responsive Design */
+
+        @media(max-width: 900px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .qualification-grid,
+            .specialization-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 12px;
+            }
+
+            .doctor-info h1 {
+                font-size: 32px;
+            }
+
+            .doctor-image {
+                width: 250px;
+                height: 300px;
+            }
+
+            .qualification-grid,
+            .specialization-grid,
+            .review-grid,
+            .treatment-list {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                margin: 0 5% 30px;
+                padding: 20px 10px;
+            }
+
+            .stat h2 {
+                font-size: 23px;
+            }
+
+            .container {
+                padding: 25px 5%;
+            }
+
+            .appointment {
+                margin: 30px 5%;
+                padding: 30px 18px;
+            }
+
+            .timing-row {
+                font-size: 12px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header>
+        <div class="logo">City Care <span>Hospital</span></div>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#qualification">Education</a>
+            <a href="#specialization">Specialization</a>
+            <a href="#timing">Timings</a>
+        </nav>
+    </header>
+
+
+    <!-- Doctor Profile -->
+
+    <section class="hero">
+
+        <div class="doctor-info">
+
+            <span class="badge">VERIFIED PROFILE · CARDIOLOGY</span>
+
+            <h1>Dr. Asha Sharma</h1>
+
+            <h3>Senior Cardiologist</h3>
+
+            <p>
+                Dedicated to providing comprehensive cardiovascular
+                healthcare with a patient-centered approach.
+                Specializing in heart disease evaluation, preventive
+                cardiology and advanced cardiac care.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#appointment" class="btn primary-btn">
+                    Book Appointment
+                </a>
+
+                <a href="#about" class="btn secondary-btn">
+                    View Profile
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="doctor-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700"
+                alt="Doctor profile">
+
+        </div>
+
+    </section>
+
+
+    <!-- Statistics -->
+
+    <section class="stats">
+
+        <div class="stat">
+            <h2>12+</h2>
+            <p>Years of Experience*</p>
+        </div>
+
+        <div class="stat">
+            <h2>5000+</h2>
+            <p>Patients Consulted*</p>
+        </div>
+
+        <div class="stat">
+            <h2>98%</h2>
+            <p>Patient Satisfaction*</p>
+        </div>
+
+        <div class="stat">
+            <h2>24/7</h2>
+            <p>Emergency Support</p>
+        </div>
+
+    </section>
+
+
+    <!-- About Doctor -->
+
+    <section class="container" id="about">
+
+        <h2 class="section-title">About the Doctor</h2>
+
+        <p class="section-subtitle">
+            Professional background and medical expertise
+        </p>
+
+        <div class="about-box">
+
+            Dr. Asha Sharma is presented as an experienced cardiologist
+            at City Care Hospital. Her clinical focus includes the
+            prevention, diagnosis and management of cardiovascular
+            conditions.
+
+            <br><br>
+
+            She follows a patient-first approach, emphasizing accurate
+            clinical assessment, evidence-based treatment and clear
+            communication with patients and their families.
+
+            <br><br>
+
+            Her approach focuses on early diagnosis, regular monitoring,
+            lifestyle guidance and personalized treatment planning
+            according to each patient's medical needs.
+
+        </div>
+
+    </section>
+
+
+    <!-- Qualifications -->
+
+    <section class="container" id="qualification">
+
+        <h2 class="section-title">Education & Qualifications</h2>
+
+        <p class="section-subtitle">
+            Academic background and professional training
+        </p>
+
+        <div class="qualification-grid">
+
+            <div class="qualification-card">
+                <h3>MBBS</h3>
+                <p>
+                    Bachelor of Medicine and Bachelor of Surgery.
+                    Foundational medical education and clinical training.
+                </p>
+            </div>
+
+            <div class="qualification-card">
+                <h3>MD – General Medicine</h3>
+                <p>
+                    Postgraduate specialization in internal medicine,
+                    diagnosis and management of medical conditions.
+                </p>
+            </div>
+
+            <div class="qualification-card">
+                <h3>DM – Cardiology</h3>
+                <p>
+                    Super-specialization in cardiovascular diseases
+                    and advanced cardiac care.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Specialization -->
+
+    <section class="container" id="specialization">
+
+        <h2 class="section-title">Medical Specializations</h2>
+
+        <p class="section-subtitle">
+            Areas of clinical expertise
+        </p>
+
+        <div class="specialization-grid">
+
+            <div class="specialization-card">
+                <div class="icon">❤️</div>
+                <h3>Heart Disease Management</h3>
+                <p>
+                    Evaluation and management of various cardiovascular
+                    diseases and heart-related conditions.
+                </p>
+            </div>
+
+            <div class="specialization-card">
+                <div class="icon">🩺</div>
+                <h3>Blood Pressure Management</h3>
+                <p>
+                    Monitoring and treatment planning for hypertension
+                    and related complications.
+                </p>
+            </div>
+
+            <div class="specialization-card">
+                <div class="icon">📊</div>
+                <h3>ECG & Cardiac Assessment</h3>
+                <p>
+                    Cardiac evaluation using ECG and other appropriate
+                    diagnostic investigations.
+                </p>
+            </div>
+
+            <div class="specialization-card">
+                <div class="icon">💓</div>
+                <h3>Arrhythmia Evaluation</h3>
+                <p>
+                    Assessment of irregular heart rhythms and
+                    appropriate treatment planning.
+                </p>
+            </div>
+
+            <div class="specialization-card">
+                <div class="icon">🏥</div>
+                <h3>Preventive Cardiology</h3>
+                <p>
+                    Heart-health education, risk assessment and
+                    prevention of cardiovascular diseases.
+                </p>
+            </div>
+
+            <div class="specialization-card">
+                <div class="icon">🔬</div>
+                <h3>Cardiac Risk Assessment</h3>
+                <p>
+                    Evaluating cardiovascular risk factors and
+                    recommending suitable medical investigations.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Patient Treatment -->
+
+    <section class="container">
+
+        <div class="treatment-box">
+
+            <h2 class="section-title">Patient Treatment Approach</h2>
+
+            <p class="section-subtitle">
+                A structured approach to patient care and recovery
+            </p>
+
+            <div class="treatment-list">
+
+                <div>
+                    <span class="check">✓</span>
+                    Detailed Patient Consultation
+                </div>
+
+                <div>
+                    <span class="check">✓</span>
+                    Medical History Evaluation
+                </div>
+
+                <div>
+                    <span class="check">✓</span>
+                    Diagnostic Test Recommendations
+                </div>
+
+                <div>
+                    <span class="check">✓</span>
+                    Personalized Treatment Planning
+                </div>
+
+                <div>
+                    <span class="check">✓</span>
+                    Medication Guidance
+                </div>
+
+                <div>
+                    <span class="check">✓</span>
+                    Regular Follow-up & Monitoring
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Consultation Timings -->
+
+    <section class="container" id="timing">
+
+        <h2 class="section-title">Consultation Schedule</h2>
+
+        <p class="section-subtitle">
+            Hospital consultation hours
+        </p>
+
+        <div class="timing-box">
+
+            <div class="timing-row">
+                <span>Monday – Friday</span>
+                <span>9:00 AM – 1:00 PM</span>
+            </div>
+
+            <div class="timing-row">
+                <span>Saturday</span>
+                <span>10:00 AM – 2:00 PM</span>
+            </div>
+
+            <div class="timing-row">
+                <span>Sunday</span>
+                <span>Closed</span>
+            </div>
+
+            <div class="timing-row">
+                <span>Department</span>
+                <span>Cardiology</span>
+            </div>
+
+            <div class="timing-row">
+                <span>Location</span>
+                <span>City Care Hospital</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Patient Reviews -->
+
+    <section class="container">
+
+        <h2 class="section-title">Patient Experiences</h2>
+
+        <p class="section-subtitle">
+            Sample testimonials for the hospital website prototype
+        </p>
+
+        <div class="review-grid">
+
+            <div class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "The doctor explained the medical condition
+                    clearly and helped me understand the treatment
+                    process. The consultation experience was excellent."
+                </p>
+
+                <h4>— Sample Patient 01</h4>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    "The consultation was well organized.
+                    I appreciated the detailed explanation,
+                    professional approach and follow-up guidance."
+                </p>
+
+                <h4>— Sample Patient 02</h4>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Appointment -->
+
+    <section class="appointment" id="appointment">
+
+        <h2>Book Your Consultation Today</h2>
+
+        <p>
+            Take the first step towards better heart health.
+            Schedule your consultation with our cardiology department.
+        </p>
+
+        <a href="index.html#appointment">
+            Book Appointment →
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>City Care Hospital</h3>
+
+        <p>
+            Dedicated to Better Healthcare & Patient Well-being
+        </p>
+
+        <p>
+            © 2026 City Care Hospital. All Rights Reserved.
+        </p>
+
+        <p>
+            This is a demonstration profile. Credentials, statistics,
+            timings and testimonials must be verified before publication.
+        </p>
+
+    </footer>
+
+</body>
+</html>
