@@ -161,6 +161,12 @@
         border: 1px solid #b7dcd8;
        }
 
+   .button.patient{
+       color: #087f79; 
+       background: white;
+        border: 1px solid #b7dcd8;
+   }
+
 
     .quick {
        position: relative;
