@@ -131,17 +131,17 @@ This project was collaboratively developed by four team members, with individual
 
 | Team Member | Registration Number | Contributions |
 |:---|:---|:---|
-| **Chitwandeep Kaur** | 12629586 | Patient Testimonials & Blood Donation |
-| **Aman Kumar** | To be added | Appointment Booking & AI Chatbot |
-| **Rishav** | To be added | To be updated |
-| **Piyush** | To be added | To be updated |
+| **Chitwandeep Kaur** | 12629586 | Patient Testimonials & Blood Donation and Camp drives |
+| **Aman Kumar** | 12622387 | Appointment Booking & Pharmacy Management System |
+| **Rishav Raj** |  12619304 | Services for Patients and basic overview |
+| **Piyush Kumar** | 12622021 | FAQs and structured the website |
 
 ### Individual Contributions
 
 <details>
 <summary><b>🌸 01. Chitwandeep Kaur</b> — Registration No. 12629586</summary>
 
-**Role: Frontend Development**
+**Role: Web Development**
 
 Responsible for developing:
 
@@ -153,25 +153,23 @@ Focused on creating dedicated patient engagement and community-oriented sections
 </details>
 
 <details>
-<summary><b>💻 02. Aman Kumar</b> — Registration No. To be added</summary>
+<summary><b>💻 02. Aman Kumar</b> — Registration No. 12622387</summary>
 
 **Role: Web Development**
 
 Responsible for developing:
 
 - Appointment Booking functionality.
-- AI-powered Chatbot.
+- Pharmacy Management System.
 
-Additional contribution details can be updated here.
+
 
 </details>
 
 <details>
-<summary><b>💻 03. Rishav</b> — Registration No. To be added</summary>
+<summary><b>💻 03. Rishav</b> — Registration No. </summary>
 
-**Role: To be updated**
-
-- Registration number: To be added.
+**Role: Front-End Development**
 - Project contribution: To be updated.
 
 </details>
@@ -179,9 +177,7 @@ Additional contribution details can be updated here.
 <details>
 <summary><b>💻 04. Piyush</b> — Registration No. To be added</summary>
 
-**Role: To be updated**
-
-- Registration number: To be added.
+**Role: Front-End Development**
 - Project contribution: To be updated.
 
 </details>
