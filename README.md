@@ -167,18 +167,18 @@ Responsible for developing:
 </details>
 
 <details>
-<summary><b>💻 03. Rishav</b> — Registration No. </summary>
+<summary><b>💻 03. Rishav</b> — Registration No. 12619304</summary>
 
 **Role: Front-End Development**
-- Project contribution: To be updated.
+- Project contribution: Services for Patients and basic overview
 
 </details>
 
 <details>
-<summary><b>💻 04. Piyush</b> — Registration No. To be added</summary>
+<summary><b>💻 04. Piyush</b> — Registration No. 12622021</summary>
 
 **Role: Front-End Development**
-- Project contribution: To be updated.
+- Project contribution:  FAQs and structured the website
 
 </details>
 
